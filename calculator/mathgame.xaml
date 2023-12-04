@@ -1,0 +1,35 @@
+﻿<Window x:Class="calculator.mathgame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:calculator"
+        mc:Ignorable="d"
+        Title="mathgame" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="txtNumber1" Margin="0,179,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" Grid.Row="1"/>
+        <TextBlock Text="+" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.555,3.043" Width="135" Grid.Row="1" Grid.ColumnSpan="3" Margin="265,171,0,0" Height="34"/>
+        <TextBox x:Name="txtNumber2" Grid.Column="2" Margin="62,179,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Grid.Row="1"/>
+        <TextBlock Text="=" Grid.Column="2" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.067,7.975" Width="43" Margin="208,168,0,0" Grid.Row="1"/>
+
+        <!-- New answer input TextBox added below -->
+        <TextBox x:Name="answerTextBox" Grid.Column="4" Margin="10,179,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Grid.Row="1"/>
+
+        <TextBlock x:Name="txtResult" Grid.Column="4" Margin="10,179,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Background="Red" TextAlignment="Center" Grid.Row="1"/>
+        <Button Content="CHECK" Grid.Row="1" Margin="229,290,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="30" RenderTransformOrigin="0.469,5.281" Grid.ColumnSpan="3" Click="Button_Click"/>
+        <Button Content="Close" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" Height="30" Click="Close_Click"/>
+    </Grid>
+</Window>
