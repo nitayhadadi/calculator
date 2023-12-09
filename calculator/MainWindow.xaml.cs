@@ -15,9 +15,7 @@ using System.Windows.Shapes;
 
 namespace calculator
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -31,10 +29,29 @@ namespace calculator
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
             string name = NameTextBox.Text;
-            string age = AgeTextBox.Text;
-            MainWindow gamepage = new MainWindow();
-            gamepage.Show();
-            this.Close();
+            if (int.TryParse(AgeTextBox.Text, out int gradeLevel))
+            {
+                // Ensure grade level is within a valid range (e.g., 1 to 4)
+                if (gradeLevel >= 1 && gradeLevel <= 4)
+                {
+                    mathgame gamePage = new mathgame(gradeLevel);  // Ensure this is the only declaration of gamePage in this scope
+                    gamePage.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid grade level (1-4).");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a numeric grade level.");
+            }
+        }
+
+        private void AgeTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

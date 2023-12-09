@@ -6,4 +6,13 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="C:\Users\nitay\OneDrive\שולחן העבודה\MainWindow.xaml.cs" Link="MainWindow.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="C:\Users\nitay\OneDrive\שולחן העבודה\Calc peoject\project calc.xaml" Link="project calc.xaml" />
+    <Page Include="C:\Users\nitay\OneDrive\שולחן העבודה\project calc.xaml" Link="project calc.xaml" />
+  </ItemGroup>
+
 </Project>
