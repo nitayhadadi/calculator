@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,15 +18,13 @@ namespace calculator
     
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
-        internal class start
+       
+        internal class Start
         {
 
         }
-        private void SubmitButton_Click(object sender, RoutedEventArgs e)
+       
+        private void submitButton_Click(object sender, RoutedEventArgs e)
         {
             string name = NameTextBox.Text;
             if (int.TryParse(AgeTextBox.Text, out int gradeLevel))
@@ -49,7 +47,7 @@ namespace calculator
             }
         }
 
-        private void AgeTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void ageTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
